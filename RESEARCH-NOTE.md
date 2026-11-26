@@ -113,6 +113,32 @@ The arithmetic reductions observed in the search are
 Their established content is the measured 36-to-18-to-zero error-set closure.
 The remaining theorem problem is to absorb the consensus into four fewer gates.
 
+## The 25 + 1 frontier
+
+The known exact 27-gate circuit ends with one OR activation gate. The shared
+two-output body before it has 26 gates, and standard synthesis leaves that body
+at 26. Therefore the public 26-gate theorem is equivalent to finding
+
+```text
+one shared 25-gate return body + one final activation gate.
+```
+
+This gives the earlier founder-frontier observation `25 = 5^2` a precise search
+role. It remains a topology hypothesis: the arithmetic does not itself prove a
+gate bound.
+
+Controls:
+
+- all 729 one-gate deletion/earlier-wire returns from the exact 27-gate circuit
+  were replayed; best distance 47;
+- greedy return-pruning of the exact 30-gate consensus to 26 gates produced
+  distance 194; and
+- standard multi-output synthesis leaves the exact pre-output body at 26 gates.
+
+A targeted seed-25 branch now locks gate 26 as the final OR, mutates the shared
+25-gate body and activation inputs, uses the palindromic point order, and starts
+from the one-edge-short family. Its initial distance is 47.
+
 ## Falsification criterion
 
 The strand earns a circuit role when a palindromic-order branch either:

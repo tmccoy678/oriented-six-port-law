@@ -58,6 +58,15 @@ inputs and found exactly equivalent to the target. Generic synthesis compressed
 the consensus from 80 gates to 30; the public proof target remains 26. This is
 one measured application of `M T M = T^-1`, not a second law.
 
+The active seed-25 branch tests a sharper decomposition:
+
+```text
+25-gate carried return body + 1 activation gate = 26 gates.
+```
+
+Its full inherited state and controls are frozen in
+[`manifests/seed25-knowledge.json`](manifests/seed25-knowledge.json).
+
 ## Verified status
 
 - The finite law is proved in Lean.

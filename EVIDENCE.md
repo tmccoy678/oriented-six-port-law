@@ -74,6 +74,17 @@ Measured consensus artifacts:
 | consensus generator | `7c6c902d7a3fb974a8eb67986c84c23d3edba7cb46588db199b8b320fbfad718` |
 | exact consensus BLIF | `5f5963b474e410068c786ea84795b5fa83f4f6b61600aab98bc32cd3364f0cb5` |
 
+Seed-25 frontier controls:
+
+| Artifact | SHA-256 |
+|---|---|
+| exhaustive literal-return search | `0ff75aada9bbeeddb513ec8693ba6d939ec2a8eaaa50735811294bdc2c0a8979` |
+| greedy consensus pruner | `ea4dd3168c6e5ad3d0db9804f32149be621d8d351d2b80c46a92af7deed886c4` |
+| locked 25+1 branch executable | `9a23231443126b53da9c2b410706d6397ed8276008443ae73c856737c29e032e` |
+
+The complete non-secret branch inheritance is recorded in
+[`manifests/seed25-knowledge.json`](manifests/seed25-knowledge.json).
+
 ## Public fleet context
 
 At `2026-11-26T17:39:07.798Z`, the P = NP public record reported:

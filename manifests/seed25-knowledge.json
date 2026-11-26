@@ -1,0 +1,50 @@
+{
+  "schema": "solver-lineage-seed25-knowledge-v1",
+  "target": "L-meta-9753",
+  "status": "active hypothesis branch",
+  "proved_law": {
+    "advance": "T^6 = I",
+    "mirror": "M^2 = I",
+    "conjugacy": "M T M = T^-1",
+    "return_clock": "tau = 6",
+    "primal_scale": "57/14",
+    "dual_scale": "14/57",
+    "pairing": "1"
+  },
+  "inherited_search_geometry": {
+    "palindromic_terms": [1, 4, 5, 7, 9, 10, 13],
+    "palindromic_gaps": [3, 1, 2, 2, 1, 3],
+    "centered_difference_magnitudes": [2, 1, 0, 1, 2],
+    "natural_plateau": 36,
+    "transpose_common_errors": 18,
+    "third_orientation_point_shift": "i + 1 mod 7",
+    "third_orientation_line_shift": "j - 1 mod 7",
+    "third_orientation_common_errors": 0
+  },
+  "founder_frontier_hypothesis": {
+    "arithmetic": "25 = 5^2",
+    "carried_body_gates": 25,
+    "activation_gate": 1,
+    "total_target_gates": 26,
+    "interpretation": "the 25-gate body carries the completed return; gate 26 activates the next frontier"
+  },
+  "controls": {
+    "known_exact_circuit_gates": 27,
+    "known_preoutput_body_gates": 26,
+    "two_output_body_best_after_standard_synthesis": 26,
+    "literal_return_rewirings_tested": 729,
+    "literal_return_best_distance": 47,
+    "exact_consensus_gates_after_synthesis": 30,
+    "greedy_consensus_to_26_distance": 194
+  },
+  "branch_configuration": {
+    "seed": 25,
+    "gates": 26,
+    "final_gate": "locked OR activation boundary",
+    "mutable_body_gates": 25,
+    "point_order": [1, 4, 5, 0, 2, 3, 6],
+    "starting_family": "twenty-one one-edge-short circuits",
+    "initial_distance": 47,
+    "witness_condition": "distance 0 on all 16384 inputs"
+  }
+}
