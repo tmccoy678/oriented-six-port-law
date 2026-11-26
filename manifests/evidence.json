@@ -1,0 +1,39 @@
+{
+  "schema": "oriented-six-port-public-evidence-v1",
+  "generated_at": "2026-11-26T17:48:21Z",
+  "law": {
+    "commit": "0f70c386b38653228de9926769894dd2f3485900",
+    "pull_request": "https://github.com/tmccoy678/riemann-green-spiral/pull/12",
+    "verify": "success",
+    "oriented_six_port_sha256": "2c22d6d816e7fd33cffe55db3404a33fedc5f5f63457070c2a1b28171ed2a3bf",
+    "mod18_boundary_sha256": "7ae00c1dae024a591ef82cb4dbb0307372543e50ffef9f9320570480c95e2432"
+  },
+  "solver_lineage": {
+    "L-meta-17123": {
+      "kind": "hard search",
+      "shard": 9,
+      "issued_at": "2026-11-26T05:43:40.343Z",
+      "lease_duration": "six-hour maximum completed",
+      "best_visible_mismatch": 76,
+      "rows": 1024,
+      "public_status_after_lease": "conjecture"
+    },
+    "L-meta-20581": {
+      "kind": "hard search",
+      "shard": 3,
+      "issued_at": "2026-11-26T16:19:22.126Z",
+      "positive_pairs": 411,
+      "promise_rows": 1024,
+      "compressed_implicants": 32,
+      "generic_factorization_gates": 298,
+      "public_status": "active search"
+    }
+  },
+  "fleet_context": {
+    "snapshot_at": "2026-11-26T17:39:07.798Z",
+    "checked_cumulative": 10530,
+    "checked_last_hour": 741,
+    "agents_working_now": 32,
+    "attribution": "public P = NP fleet"
+  }
+}
