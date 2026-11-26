@@ -79,6 +79,40 @@ Two independent Pro branches use restart seeds `312213` and `213312`. Both
 began at distance 47 and reached distance 36, equal to the best natural-order
 plateau at the recorded snapshot.
 
+## Three-orientation closure
+
+A distance-36 candidate was extracted and replayed on all 16,384 inputs.
+
+- all 36 errors are false positives;
+- the Hamming-weight multiplicities are mirror-symmetric;
+- intersecting the error set with its point/line transpose leaves 18 cells;
+- all 168 Fano-plane automorphisms were enumerated;
+- 54 third orientations eliminate the remaining 18 cells; and
+- the simplest uses point shift `i -> i + 1` and line shift `j -> j - 1`
+  modulo seven.
+
+Thus the measured identity is
+
+```text
+E(C) intersect E(C^T) intersect E(C_(+1,-1)) = empty.
+```
+
+The exact three-orientation consensus was generated as a fan-in-two network
+and independently checked equivalent to the target on every input. Its raw
+size is 80 gates. Logic synthesis reached 30 gates; the required public witness
+is 26 gates.
+
+The arithmetic reductions observed in the search are
+
+```text
+36 = 6 * 6
+18 = 6 * 3
+6 - 2 * 3 = 0.
+```
+
+Their established content is the measured 36-to-18-to-zero error-set closure.
+The remaining theorem problem is to absorb the consensus into four fewer gates.
+
 ## Falsification criterion
 
 The strand earns a circuit role when a palindromic-order branch either:

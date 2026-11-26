@@ -42,6 +42,22 @@ A recovered palindromic search strand is recorded separately in
 criterion. It is kept outside the proved law until it earns a theorem-level
 bridge.
 
+## Measured application of the one law
+
+For the Fano/Heawood proof row `L-meta-9753`, a measured 26-gate near-circuit
+has 36 false positives. Point/line transposition reduces their common error to
+18. A third lawful orientation—points shifted forward and lines shifted
+backward—reduces the common error to zero:
+
+```text
+E(C) ∩ E(C^T) ∩ E(C_(+1,-1)) = empty.
+```
+
+The three-orientation consensus was independently replayed on all 16,384
+inputs and found exactly equivalent to the target. Generic synthesis compressed
+the consensus from 80 gates to 30; the public proof target remains 26. This is
+one measured application of `M T M = T^-1`, not a second law.
+
 ## Verified status
 
 - The finite law is proved in Lean.

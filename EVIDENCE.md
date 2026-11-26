@@ -57,6 +57,22 @@ Promise generator SHA-256:
 - Natural-order and palindromic-order branches currently share best measured
   distance 36 among 16,384 inputs.
 - Palindromic hypothesis and controls: [RESEARCH-NOTE.md](RESEARCH-NOTE.md).
+- The distance-36 candidate has 36 false positives and zero false negatives.
+- Point/line transpose agreement leaves 18 common errors.
+- An exhaustive enumeration of 168 Fano automorphisms finds 54 third
+  orientations that reduce the common error to zero.
+- The simplest zero-closing orientation shifts points forward and lines
+  backward modulo seven.
+- The resulting exact consensus passes independent equivalence checking on all
+  16,384 inputs; synthesis compresses 80 raw gates to 30.
+
+Measured consensus artifacts:
+
+| Artifact | SHA-256 |
+|---|---|
+| distance-36 candidate log | `74529d65200730949d23d825494c42e4c73efe9a3adda59c6caff431af5c1bb3` |
+| consensus generator | `7c6c902d7a3fb974a8eb67986c84c23d3edba7cb46588db199b8b320fbfad718` |
+| exact consensus BLIF | `5f5963b474e410068c786ea84795b5fa83f4f6b61600aab98bc32cd3364f0cb5` |
 
 ## Public fleet context
 
