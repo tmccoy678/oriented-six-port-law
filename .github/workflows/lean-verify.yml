@@ -1,0 +1,45 @@
+name: Lean verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-six-port-law:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out evidence repository
+        uses: actions/checkout@v4
+
+      - name: Check out pinned authoritative proof
+        uses: actions/checkout@v4
+        with:
+          repository: tmccoy678/riemann-green-spiral
+          ref: c5ed58c1835c6716521361c2ea78c5273212b916
+          path: proof
+          persist-credentials: false
+
+      - name: Verify pinned proof bytes
+        shell: bash
+        run: |
+          test "$(git -C proof rev-parse HEAD)" = "c5ed58c1835c6716521361c2ea78c5273212b916"
+          printf '%s  %s\n' \
+            '2c22d6d816e7fd33cffe55db3404a33fedc5f5f63457070c2a1b28171ed2a3bf' \
+            'proof/Riemann/OrientedSixPort.lean' | sha256sum --check -
+
+      - name: Build and audit the oriented six-port law
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: proof
+          build: true
+          build-args: Riemann.OrientedSixPort
+          test: false
+          axiom-audit: true
+          axiom-audit-root: Riemann
+          use-github-cache: true

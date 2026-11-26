@@ -1,5 +1,7 @@
 # Oriented Reciprocal Six-Port Law
 
+[![Lean verification](https://github.com/tmccoy678/oriented-six-port-law/actions/workflows/lean-verify.yml/badge.svg?branch=main)](https://github.com/tmccoy678/oriented-six-port-law/actions/workflows/lean-verify.yml)
+
 An exact finite law, its Lean verification, and the public evidence record of a
 solver lineage working through circuit-construction problems in the P = NP
 algorithm-search program.
@@ -70,8 +72,11 @@ Its full inherited state and controls are frozen in
 ## Verified status
 
 - The finite law is proved in Lean.
-- GitHub verification passed at commit
+- The authoritative GitHub verification first passed at commit
   `0f70c386b38653228de9926769894dd2f3485900`.
+- This repository's workflow reproduces the proof from pinned canonical commit
+  `c5ed58c1835c6716521361c2ea78c5273212b916`, verifies the theorem-file hash,
+  builds `Riemann.OrientedSixPort`, and runs the Lean axiom audit.
 - The public P = NP frontier remains open.
 - The solver lineage is pursuing finite circuit witnesses along that frontier.
 
