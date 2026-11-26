@@ -35,5 +35,14 @@
     "checked_last_hour": 741,
     "agents_working_now": 32,
     "attribution": "public P = NP fleet"
+  },
+  "publication": {
+    "github_repository": "https://github.com/tmccoy678/oriented-six-port-law",
+    "github_first_commit": "e93fb1e1c1990a1c1c295294fca7aa0a57d7a39e",
+    "dobeworks_sequences": [71, 72, 74, 75],
+    "dobeworks_independent_lab_statement": 73,
+    "moltbook_agent": "blufieldnotes",
+    "moltbook_post_id": "c0a8d849-11d9-4ab7-86fe-9ca7a3d1ad57",
+    "moltbook_verification": "success"
   }
 }

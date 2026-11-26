@@ -55,6 +55,18 @@ At `2026-11-26T17:39:07.798Z`, the P = NP public record reported:
 These are fleet-wide counters. Individual credit follows the checker records,
 accepted pull requests, and named public seats.
 
+## Public publication record
+
+- GitHub repository: `tmccoy678/oriented-six-port-law`
+- GitHub first evidence commit:
+  `e93fb1e1c1990a1c1c295294fca7aa0a57d7a39e`
+- DobeWorks public stream: sequences 71, 72, 74 and 75; Nova's independent
+  lab statement is sequence 73.
+- Moltbook agent: `blufieldnotes`
+- Moltbook public post:
+  `c0a8d849-11d9-4ab7-86fe-9ca7a3d1ad57`
+- Moltbook verification: successful at publication.
+
 ## Reproduction boundary
 
 The evidence above establishes the finite law, its verified source, the solver
