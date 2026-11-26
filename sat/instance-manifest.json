@@ -1,0 +1,26 @@
+{
+  "published_before_verdict_at": "2026-11-26T23:53:27Z",
+  "problem": "L-meta-9753",
+  "cell": "three-star return",
+  "inputs": 9,
+  "gates": 10,
+  "operations": ["and", "or", "not"],
+  "encoding": "tight",
+  "variables": 15660,
+  "clauses": 231441,
+  "cnf_sha256": "93259dc4c97f3291d8e59f94ddf759d7d5d8131d13517de002ecaf6c63beba6c",
+  "encoder_sha256": "7f25a54a915859ae74e3f02f45cf61cba919c755188bae9ae4abf7faafdb0094",
+  "assembler_sha256": "fda26c67d1d3e8b671a61b3cdb38b0ef77f489abc5a6455e02ebc28441335c72",
+  "solver": {
+    "name": "CaDiCaL",
+    "version": "2.1.2"
+  },
+  "full_assembly": {
+    "return_cell_gates": 10,
+    "untouched_star_gates": 12,
+    "join_gates": 4,
+    "total_gates": 26,
+    "truth_table_rows": 16384
+  },
+  "status_at_publication": "running; no SAT or UNSAT verdict"
+}

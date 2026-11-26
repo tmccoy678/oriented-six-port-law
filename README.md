@@ -69,6 +69,10 @@ The active seed-25 branch tests a sharper decomposition:
 Its full inherited state and controls are frozen in
 [`manifests/seed25-knowledge.json`](manifests/seed25-knowledge.json).
 
+The exact pre-result CaDiCaL construction for the isolated three-star return
+cell is frozen in [`sat/`](sat/README.md). It includes the deterministic SAT
+encoder, 26-gate assembler, generated-CNF hash, and publication timestamp.
+
 ## Verified status
 
 - The finite law is proved in Lean.

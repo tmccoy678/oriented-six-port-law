@@ -17,6 +17,14 @@ jobs:
       - name: Check out evidence repository
         uses: actions/checkout@v4
 
+      - name: Reproduce frozen SAT instance
+        shell: bash
+        run: |
+          python3 sat/synth_three_star_return_sat.py encode-tight "$RUNNER_TEMP/L_meta_9753_three_star_tight.cnf"
+          printf '%s  %s\n' \
+            '93259dc4c97f3291d8e59f94ddf759d7d5d8131d13517de002ecaf6c63beba6c' \
+            "$RUNNER_TEMP/L_meta_9753_three_star_tight.cnf" | sha256sum --check -
+
       - name: Check out pinned authoritative proof
         uses: actions/checkout@v4
         with:
