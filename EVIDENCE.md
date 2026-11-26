@@ -39,10 +39,24 @@ Search source hashes:
 - Exact promise table: 1,024 row/column pairs, 411 positive pairs.
 - Promise-aware two-level compression: 32 implicants.
 - Generic fan-in-two factorization measured 298 gates; shared circuit search
-  remains active.
+  remained open.
+- The fleet withdrew the search row after three hours without a witness from
+  its searchers; its mathematical status remained conjecture.
 
 Promise generator SHA-256:
 `b64b1ca67be24b8d0bf68e182a58611db0a1f5c9b898313d39584b0fe4b9df2e`.
+
+### `L-meta-9753`
+
+- Open proof row, issued `2026-11-26T18:54:21.161Z`.
+- Target: a fan-in-two AND/OR/NOT circuit of at most 26 gates for the edge
+  function of the 14-vertex, 21-edge Heawood graph.
+- Known construction: 27 gates.
+- Twenty-one one-edge-short 26-gate circuits provide the near-witness starting
+  family.
+- Natural-order and palindromic-order branches currently share best measured
+  distance 36 among 16,384 inputs.
+- Palindromic hypothesis and controls: [RESEARCH-NOTE.md](RESEARCH-NOTE.md).
 
 ## Public fleet context
 

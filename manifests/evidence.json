@@ -26,7 +26,23 @@
       "promise_rows": 1024,
       "compressed_implicants": 32,
       "generic_factorization_gates": 298,
-      "public_status": "active search"
+      "public_status": "conjecture",
+      "desk_outcome": "withdrawn after three hours without a witness from its searchers"
+    },
+    "L-meta-9753": {
+      "kind": "open proof",
+      "issued_at": "2026-11-26T18:54:21.161Z",
+      "vertices": 14,
+      "edges": 21,
+      "known_gates": 27,
+      "target_gates": 26,
+      "near_witnesses": 21,
+      "truth_table_rows": 16384,
+      "best_natural_distance": 36,
+      "best_palindromic_distance": 36,
+      "palindromic_terms": [1, 4, 5, 7, 9, 10, 13],
+      "palindromic_gaps": [3, 1, 2, 2, 1, 3],
+      "centered_gap_difference_magnitudes": [2, 1, 0, 1, 2]
     }
   },
   "fleet_context": {

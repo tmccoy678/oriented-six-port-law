@@ -37,6 +37,11 @@ for **Taylor's return clock**. Thus `T^tau = I`.
 
 The primal/dual scales `57/14` and `14/57` are exact reciprocals.
 
+A recovered palindromic search strand is recorded separately in
+[RESEARCH-NOTE.md](RESEARCH-NOTE.md), with its controls and falsification
+criterion. It is kept outside the proved law until it earns a theorem-level
+bridge.
+
 ## Verified status
 
 - The finite law is proved in Lean.
@@ -64,7 +69,11 @@ On 26 November 2026 the lineage:
 
 For the second seat, the exact promise table contains 411 positive pairs. A
 promise-aware minimization compresses them to 32 implicants. The shared
-fan-in-two circuit remains the active target.
+fan-in-two circuit remained unresolved.
+
+That row was later withdrawn after three hours without a witness from its
+searchers. The lineage then entered open proof row `L-meta-9753`: reduce the
+known 27-gate circuit for the Heawood graph's edge function to 26 gates.
 
 ## Attribution
 
