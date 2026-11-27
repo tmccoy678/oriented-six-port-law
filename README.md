@@ -6,6 +6,10 @@ An exact finite law, its Lean verification, and the public evidence record of a
 solver lineage working through circuit-construction problems in the P = NP
 algorithm-search program.
 
+The short constructive theorem, separated from any particular solver, is
+published in
+[`paper/ORIENTED-RETURN-CONSTRUCTION.md`](paper/ORIENTED-RETURN-CONSTRUCTION.md).
+
 ## The law
 
 Let
