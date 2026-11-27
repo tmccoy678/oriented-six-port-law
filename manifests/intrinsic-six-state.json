@@ -1,0 +1,31 @@
+{
+  "schema": "intrinsic-six-state-public-v1",
+  "date": "2026-11-27",
+  "target": "x0(x3 or x4 or x6) or x1(x3 or x5 or x7) or x2(x4 or x5 or x8)",
+  "pnp_environment": {
+    "repository": "https://github.com/tmccoy678/pequalnp-proofs",
+    "commit": "fff8fe2fb81a0184a99b80348810e1d8147ff2c2"
+  },
+  "lean": {
+    "ZeroFactorialNodeSearch.lean": "86a5fbcde7a428904212852c9672d8b34e9524d5347b91aa088c619c205ef420",
+    "ZeroFactorialClosedNode.lean": "e929f94ad5f7465ec0810b7b78cb9dd94d46c367d351ca39a852fd84230fba23",
+    "ZeroFactorialSymmetry.lean": "dcfcd1b49066b0d232851ce962eb531d30b8fd152cd93db37f89b04ad79c6910",
+    "ZeroFactorialEnantiomers.lean": "09381e3e18f909bc00df4f2f898be0dd64d311dcc9da08ff66937c688907dd9d",
+    "IntrinsicSixStateChild.lean": "eb8c65c1c352d602a0fb1f061753e71d2a3da641dd8c6e250659028f8933f0b1"
+  },
+  "sat": {
+    "source_unrestricted_cnf_sha256": "c903f0cc36f4678ebe2eb8bc156d4225d7c88e19958dac117d331d67e304cdd9",
+    "intrinsic_cnf_sha256": "51fac531f709e1eb2d64c3a0a0958618f27f0e1b76047ded204cb7d9525e48e7",
+    "variables": 15661,
+    "clauses": 229394,
+    "hand_variable": 15661,
+    "right_conditional_clause": [-15661, 4, 7, 10, 13, 16, 19],
+    "left_conditional_clause": [15661, 4, 8, 10, 13, 17, 19]
+  },
+  "check_contracts": {
+    "node_route_steps": 9,
+    "orientation_steps": 3,
+    "local_witness_gate_evaluations": 5120,
+    "full_witness_gate_evaluations": 425984
+  }
+}

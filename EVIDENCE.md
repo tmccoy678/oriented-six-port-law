@@ -11,6 +11,24 @@ The authoritative branch head is
 `0f70c386b38653228de9926769894dd2f3485900`; its required GitHub `verify`
 check completed successfully.
 
+## Intrinsic six-state return
+
+| Artifact | SHA-256 |
+|---|---|
+| `lean/ZeroFactorialNodeSearch.lean` | `86a5fbcde7a428904212852c9672d8b34e9524d5347b91aa088c619c205ef420` |
+| `lean/ZeroFactorialClosedNode.lean` | `e929f94ad5f7465ec0810b7b78cb9dd94d46c367d351ca39a852fd84230fba23` |
+| `lean/ZeroFactorialSymmetry.lean` | `dcfcd1b49066b0d232851ce962eb531d30b8fd152cd93db37f89b04ad79c6910` |
+| `lean/ZeroFactorialEnantiomers.lean` | `09381e3e18f909bc00df4f2f898be0dd64d311dcc9da08ff66937c688907dd9d` |
+| `lean/IntrinsicSixStateChild.lean` | `eb8c65c1c352d602a0fb1f061753e71d2a3da641dd8c6e250659028f8933f0b1` |
+| unrestricted source CNF | `c903f0cc36f4678ebe2eb8bc156d4225d7c88e19958dac117d331d67e304cdd9` |
+| intrinsic six-state CNF | `51fac531f709e1eb2d64c3a0a0958618f27f0e1b76047ded204cb7d9525e48e7` |
+
+The public verifier pins `tmccoy678/pequalnp-proofs` commit
+`fff8fe2fb81a0184a99b80348810e1d8147ff2c2`. The derived CNF differs from the
+unrestricted source by one hand variable and two conditional representative
+clauses. The manifest is
+[`manifests/intrinsic-six-state.json`](manifests/intrinsic-six-state.json).
+
 ## Public search chronology
 
 ### `L-meta-17123`

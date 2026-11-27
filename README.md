@@ -79,9 +79,66 @@ The exact pre-result CaDiCaL construction for the isolated three-star return
 cell is frozen in [`sat/`](sat/README.md). It includes the deterministic SAT
 encoder, 26-gate assembler, generated-CNF hash, and publication timestamp.
 
+## Intrinsic six-state return
+
+The 27 November finite reduction concerns the nine-input target
+
+```text
+x0(x3 or x4 or x6) or x1(x3 or x5 or x7) or x2(x4 or x5 or x8).
+```
+
+Its nine minimal positive supports form the closed route
+
+```text
+03 -> 06 -> 04 -> 24 -> 28 -> 25 -> 15 -> 17 -> 13 -> 03.
+```
+
+The three family junctions are `4`, `5`, and `3`. Reversing the route gives
+the opposite orientation. With `T` the family turn and `M` the mirror, Lean
+verifies
+
+```text
+T^3 = I
+M^2 = I
+M T M = T^-1.
+```
+
+Every decoded witness has a same-size cyclic relabeling in each handed slice:
+
+```text
+right representatives = {0, 3, 6}
+left representatives  = {0, 4, 6}
+```
+
+One internal Boolean variable lets the derived SAT instance choose either
+hand. The source encoding has 15,660 variables and 229,392 clauses; the
+intrinsic instance has 15,661 variables and 229,394 clauses.
+
+The bounded subquestions carry exact checker costs:
+
+| check | cost |
+|---|---:|
+| closed node route | 9 edge visits |
+| orientation normalization | at most 3 turns/reflections |
+| local ten-gate witness | 5,120 gate evaluations |
+| assembled 26-gate witness | 425,984 gate evaluations |
+
+Lean sources and one-command reproduction instructions are in
+[`lean/`](lean/README.md). The frozen hashes and CNF clauses are in
+[`manifests/intrinsic-six-state.json`](manifests/intrinsic-six-state.json).
+
+### Scope
+
+These theorems establish a finite target, its closed return geometry,
+witness-preserving relabelings, two handed representative slices, and exact
+finite checker costs. The mathematical statements are the Lean declarations
+in `lean/`.
+
 ## Verified status
 
 - The finite law is proved in Lean.
+- The intrinsic six-state return package is proved against pinned public commit
+  `fff8fe2fb81a0184a99b80348810e1d8147ff2c2` of `pequalnp-proofs`.
 - The authoritative GitHub verification first passed at commit
   `0f70c386b38653228de9926769894dd2f3485900`.
 - This repository's workflow reproduces the proof from pinned canonical commit

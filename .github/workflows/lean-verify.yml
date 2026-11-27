@@ -51,3 +51,46 @@ jobs:
           axiom-audit: true
           axiom-audit-root: Riemann
           use-github-cache: true
+
+  verify-intrinsic-six-state:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@v4
+
+      - name: Check out pinned P = NP proof environment
+        uses: actions/checkout@v4
+        with:
+          repository: tmccoy678/pequalnp-proofs
+          ref: fff8fe2fb81a0184a99b80348810e1d8147ff2c2
+          path: pnp
+          persist-credentials: false
+
+      - name: Build the pinned relabeling dependency
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: pnp/lean
+          build: true
+          build-args: PEqualNP.MetaComplexity.Helpers.PermInputs
+          test: false
+          use-github-cache: true
+
+      - name: Verify the intrinsic six-state Lean package
+        shell: bash
+        run: ./scripts/verify-intrinsic-six-state.sh "$GITHUB_WORKSPACE/pnp"
+
+      - name: Reproduce the internal-hand SAT instance
+        shell: bash
+        run: |
+          python3 sat/synth_three_star_return_sat.py encode \
+            "$RUNNER_TEMP/three-star-unrestricted.cnf"
+          printf '%s  %s\n' \
+            'c903f0cc36f4678ebe2eb8bc156d4225d7c88e19958dac117d331d67e304cdd9' \
+            "$RUNNER_TEMP/three-star-unrestricted.cnf" | sha256sum --check -
+          python3 sat/build_intrinsic_six_state_cnf.py \
+            "$RUNNER_TEMP/three-star-unrestricted.cnf" \
+            "$RUNNER_TEMP/intrinsic-six-state.cnf" \
+            "$RUNNER_TEMP/intrinsic-six-state.json"
+          printf '%s  %s\n' \
+            '51fac531f709e1eb2d64c3a0a0958618f27f0e1b76047ded204cb7d9525e48e7' \
+            "$RUNNER_TEMP/intrinsic-six-state.cnf" | sha256sum --check -

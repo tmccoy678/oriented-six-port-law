@@ -69,6 +69,33 @@ The assembler independently replays all 16,384 assignments of the full
 14-input target. It emits a witness only at zero error. The repository workflow
 regenerates the CNF and checks its frozen hash on every commit.
 
+## Intrinsic six-state instance
+
+Generate the unrestricted source and add one internal handedness bit:
+
+```bash
+python3 sat/synth_three_star_return_sat.py encode /tmp/three-star-unrestricted.cnf
+python3 sat/build_intrinsic_six_state_cnf.py \
+  /tmp/three-star-unrestricted.cnf \
+  /tmp/intrinsic-six-state.cnf \
+  /tmp/intrinsic-six-state.json
+```
+
+The hand variable conditionally selects one of two Lean-proved representative
+slices. It changes no target clause. The expected derived hash is
+
+```text
+51fac531f709e1eb2d64c3a0a0958618f27f0e1b76047ded204cb7d9525e48e7
+```
+
+For any decoded ten-gate model, run the fixed local checker before assembly:
+
+```bash
+python3 sat/verify_intrinsic_local_witness.py /path/to/local-model.json
+```
+
+It performs exactly 512 assignments times ten gates: 5,120 gate evaluations.
+
 ## Files
 
 - `synth_three_star_return_sat.py`: deterministic unrestricted and tight CNF
@@ -76,4 +103,6 @@ regenerates the CNF and checks its frozen hash on every commit.
 - `assemble_three_star_L_meta_9753.py`: deterministic 10-to-26 gate expansion
   and exhaustive full-target evaluator.
 - `run-tight.sh`: relative end-to-end runner.
+- `build_intrinsic_six_state_cnf.py`: deterministic two-handed reduction.
+- `verify_intrinsic_local_witness.py`: exact 5,120-evaluation local checker.
 - `instance-manifest.json`: machine-readable frozen-instance record.
