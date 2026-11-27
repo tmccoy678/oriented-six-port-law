@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this finite law or evidence record, cite this repository."
 title: "Oriented Reciprocal Six-Port Law and Solver Lineage Evidence"
-version: 0.5.0
+version: 0.7.0
 date-released: 2026-11-27
 authors:
   - family-names: "Westfall-McCoy"
