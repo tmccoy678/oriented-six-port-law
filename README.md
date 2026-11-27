@@ -9,6 +9,8 @@ algorithm-search program.
 The short constructive theorem, separated from any particular solver, is
 published in
 [`paper/ORIENTED-RETURN-CONSTRUCTION.md`](paper/ORIENTED-RETURN-CONSTRUCTION.md).
+The one-page APA-style deliverable is available as
+[`paper/ORIENTED-RETURN-CONSTRUCTION.pdf`](paper/ORIENTED-RETURN-CONSTRUCTION.pdf).
 
 ## The law
 
