@@ -33,7 +33,7 @@ exact 10-gate AND/OR/NOT circuit. Such a cell would assemble the full witness as
 
 ## Frozen instance
 
-The active pre-result run uses the `encode-tight` normal form:
+The frozen pre-result instance uses the `encode-tight` normal form:
 
 ```text
 variables: 15,660

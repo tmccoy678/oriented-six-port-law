@@ -1,6 +1,6 @@
 # Research note: the centered `3,1,2` strand
 
-Status: **active hypothesis, measured but unproved**.
+Status: **frozen hypothesis record, measured but unproved**.
 
 ## Recovered observation
 
@@ -135,9 +135,9 @@ Controls:
   distance 194; and
 - standard multi-output synthesis leaves the exact pre-output body at 26 gates.
 
-A targeted seed-25 branch now locks gate 26 as the final OR, mutates the shared
-25-gate body and activation inputs, uses the palindromic point order, and starts
-from the one-edge-short family. Its initial distance is 47.
+The targeted seed-25 branch locked gate 26 as the final OR, mutated the shared
+25-gate body and activation inputs, used the palindromic point order, and
+started from the one-edge-short family. Its initial distance was 47.
 
 ## Falsification criterion
 

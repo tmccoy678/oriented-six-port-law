@@ -72,8 +72,8 @@ Promise generator SHA-256:
 - Known construction: 27 gates.
 - Twenty-one one-edge-short 26-gate circuits provide the near-witness starting
   family.
-- Natural-order and palindromic-order branches currently share best measured
-  distance 36 among 16,384 inputs.
+- At the frozen measurement, the natural-order and palindromic-order branches
+  shared best measured distance 36 among 16,384 inputs.
 - Palindromic hypothesis and controls: [RESEARCH-NOTE.md](RESEARCH-NOTE.md).
 - The distance-36 candidate has 36 false positives and zero false negatives.
 - Point/line transpose agreement leaves 18 common errors.
