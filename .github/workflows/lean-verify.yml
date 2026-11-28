@@ -25,6 +25,21 @@ jobs:
             '93259dc4c97f3291d8e59f94ddf759d7d5d8131d13517de002ecaf6c63beba6c' \
             "$RUNNER_TEMP/L_meta_9753_three_star_tight.cnf" | sha256sum --check -
 
+      - name: Reproduce paired shared-parent instance
+        shell: bash
+        run: |
+          python3 sat/synth_shared_parent_L_meta_9753.py \
+            init "$RUNNER_TEMP/L-meta-9753-shared-parent-examples.json"
+          python3 sat/synth_shared_parent_L_meta_9753.py \
+            encode "$RUNNER_TEMP/L-meta-9753-shared-parent-examples.json" \
+            "$RUNNER_TEMP/L-meta-9753-shared-parent.cnf" 1
+          printf '%s  %s\n' \
+            '95e232dbe9adf62c7702f27e0f389f504eed12d10661cb4aa55068c81815b3bf' \
+            "$RUNNER_TEMP/L-meta-9753-shared-parent-examples.json" | sha256sum --check -
+          printf '%s  %s\n' \
+            'e4a292d03c158626708063770a5f0fa0b24a1995f4b3a8ab0b8ce290901cb35c' \
+            "$RUNNER_TEMP/L-meta-9753-shared-parent.cnf" | sha256sum --check -
+
       - name: Check out pinned authoritative proof
         uses: actions/checkout@v4
         with:

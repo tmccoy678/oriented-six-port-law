@@ -106,3 +106,10 @@ It performs exactly 512 assignments times ten gates: 5,120 gate evaluations.
 - `build_intrinsic_six_state_cnf.py`: deterministic two-handed reduction.
 - `verify_intrinsic_local_witness.py`: exact 5,120-evaluation local checker.
 - `instance-manifest.json`: machine-readable frozen-instance record.
+
+## Shared-parent follow-up
+
+The later balanced-reader question uses one global 26-gate parent and evaluates
+both restrictions against the same gate and operand choices. The paired CEGIS
+encoding and the failed-symmetry boundary are documented in
+[`SHARED-PARENT.md`](SHARED-PARENT.md).

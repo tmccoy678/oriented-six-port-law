@@ -148,3 +148,10 @@ The strand earns a circuit role when a palindromic-order branch either:
    and compiles through the Lean checker.
 
 Until then it remains a precise search-order hypothesis rather than a theorem.
+
+## Quantifier discipline
+
+If a later reduction uses named calibrations, probes, or sensors, suitable
+objects must be chosen before the unknown key is evaluated and their complete
+joint answer map must separate every admissible key. Distinct names alone do
+not imply identifying answers, and post-hoc probe selection is not permitted.
