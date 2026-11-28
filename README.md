@@ -66,7 +66,7 @@ inputs and found exactly equivalent to the target. Generic synthesis compressed
 the consensus from 80 gates to 30; the public proof target remains 26. This is
 one measured application of `M T M = T^-1`, not a second law.
 
-The active seed-25 branch tests a sharper decomposition:
+A seed-25 branch tested the sharper decomposition:
 
 ```text
 25-gate carried return body + 1 activation gate = 26 gates.
@@ -75,8 +75,9 @@ The active seed-25 branch tests a sharper decomposition:
 Its full inherited state and controls are frozen in
 [`manifests/seed25-knowledge.json`](manifests/seed25-knowledge.json).
 
-The exact pre-result CaDiCaL construction for the isolated three-star return
-cell is frozen in [`sat/`](sat/README.md). It includes the deterministic SAT
+The seed-25 and CaDiCaL artifacts are frozen experiment records, not active
+proof claims. The exact pre-result construction for the isolated three-star
+return cell is in [`sat/`](sat/README.md), including the deterministic SAT
 encoder, 26-gate assembler, generated-CNF hash, and publication timestamp.
 
 ## Intrinsic six-state return
@@ -145,7 +146,10 @@ in `lean/`.
   `c5ed58c1835c6716521361c2ea78c5273212b916`, verifies the theorem-file hash,
   builds `Riemann.OrientedSixPort`, and runs the Lean axiom audit.
 - The public P = NP frontier remains open.
-- The solver lineage is pursuing finite circuit witnesses along that frontier.
+- The [checked public branch](https://github.com/tmccoy678/pequalnp-proofs/tree/bridge/L-meta-9753)
+  proves that the isolated nine-input target has no circuit of size ten, and
+  that any hypothetical size-26 full witness must use a NOT gate.
+- No exact 26-gate witness or universal size-26 exclusion is claimed here.
 
 Authoritative proof review:
 [riemann-green-spiral PR #12](https://github.com/tmccoy678/riemann-green-spiral/pull/12).
@@ -169,8 +173,10 @@ promise-aware minimization compresses them to 32 implicants. The shared
 fan-in-two circuit remained unresolved.
 
 That row was later withdrawn after three hours without a witness from its
-searchers. The lineage then entered open proof row `L-meta-9753`: reduce the
-known 27-gate circuit for the Heawood graph's edge function to 26 gates.
+searchers. The lineage then studied proof row `L-meta-9753`: reduce the known
+27-gate circuit for the Heawood graph's edge function to 26 gates. The public
+finite results are preserved; this repository does not claim that row is
+settled.
 
 ## Attribution
 
